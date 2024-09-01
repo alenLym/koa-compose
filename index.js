@@ -1,19 +1,19 @@
 'use strict'
 
 /**
- * Expose compositor.
+ * Expose 合成器。
  */
 
 module.exports = compose
 
 /**
- * Compose `middleware` returning
- * a fully valid middleware comprised
- * of all those which are passed.
+ * Compose 'middleware' 返回
+ * 一个完全有效的中间件，包括
+ * 在所有通过的文件中。
  *
- * @param {Array} middleware
- * @return {Function}
- * @api public
+ * @param {Array} 中间件
+ * @return {功能}
+ * @api公众
  */
 
 function compose (middleware) {
@@ -29,7 +29,7 @@ function compose (middleware) {
    */
 
   return function (context, next) {
-    // last called middleware #
+    // 上次调用的中间件#
     let index = -1
     return dispatch(0)
     function dispatch (i) {
